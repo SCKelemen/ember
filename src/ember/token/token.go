@@ -5,7 +5,7 @@ type TokenType string
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
-
+	//COMMENT = "COMMENT"
 	// Identifiers + literals
 	IDENT = "IDENT" // add, foobar, x, y, ...
 	INT   = "INT"   // 1343456
@@ -49,7 +49,7 @@ type Token struct {
 }
 
 var keywords = map[string]TokenType{
-	"fn":     FUNCTION,
+	"func":   FUNCTION,
 	"let":    LET,
 	"true":   TRUE,
 	"false":  FALSE,

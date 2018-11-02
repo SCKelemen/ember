@@ -3,6 +3,7 @@ package lexer
 import (
 	"testing"
 
+	"github.com/sckelemen/ember/src/ember/lexer"
 	"github.com/sckelemen/ember/src/ember/token"
 )
 
@@ -108,7 +109,7 @@ if (5 < 10) {
 		{token.EOF, ""},
 	}
 
-	l := New(input)
+	l := lexer.New(input)
 
 	for i, tt := range tests {
 		tok := l.NextToken()
