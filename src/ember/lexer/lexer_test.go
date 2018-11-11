@@ -7,6 +7,32 @@ import (
 	"github.com/sckelemen/ember/src/ember/token"
 )
 
+/*
+tests
+*/
+
+/*
+ test tokens
+*/
+type Testcase struct {
+	Input string
+	Expected token.Token[]
+}
+const (
+	TestAssignment Testcase = Testcase{
+		Input: `let five = 5`,
+		Expected: token.Token[]{
+			token.LET,
+			token.IDENT,
+			token.ASSIGN,
+			token.INT,
+		}
+	}
+)
+
+
+
+
 func TestNextToken(t *testing.T) {
 	input := `let five = 5;
 let ten = 10;
