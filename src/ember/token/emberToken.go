@@ -53,7 +53,7 @@ const (
 	XOR_ASSIGN     // ^=
 	SHL_ASSIGN     // <<=
 	SHR_ASSIGN     // >>=
-	AND_NOT_ASSIGN // &^+ 		perhaps this should be &!=
+	AND_NOT_ASSIGN // &^= 		perhaps this should be &!=
 	bit_asn_end
 
 	logic_op_beg

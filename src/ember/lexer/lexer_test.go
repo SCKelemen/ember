@@ -16,7 +16,7 @@ tests
 */
 type Testcase struct {
 	Input string
-	Expected token.Token[]
+	Expected []token.Token
 }
 const (
 	TestAssignment Testcase = Testcase{

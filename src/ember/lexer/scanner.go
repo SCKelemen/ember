@@ -3,14 +3,30 @@ package lexer
 import (
 	"unicode"
 	"unicode/utf8"
+
+	"github.com/sckelemen/ember/src/ember/token"
 )
 
 type Scanner struct {
+	File      string
+	Directory string
+	Errors    []ScanError
+	Lexemes   []Lexeme
+	src []byte
+
 	ch       rune
 	offset   int
 	rdOffset int
 	lnOffset int
 }
+
+func (s *Scanner) Scan() {
+	while s.rdOffset < len(s.src) {
+		
+		
+	}
+}
+
 
 func (s *Scanner) next() {
 
@@ -103,3 +119,9 @@ cases:
 
 
 */
+
+type Lexeme struct {
+	Token token.Token
+	Value string
+	src   []byte
+}
