@@ -28,13 +28,13 @@ func New(input string) *Lexer {
 *		MUL
 *=		MUL_ASSIGN
 **		EXP
-**=	EXP_ASSIGN
-*\/	MLCOMMENT_END
+**=		EXP_ASSIGN
+*\/		MLCOMMENT_END
 
 /		QUO
 /=		QUO_ASSIGN
 //		LNCOMMENT
-/* 	MLCOMMENT_BEG
+/* 		MLCOMMENT_BEG
 
 %		REM
 %=		REM_ASSIGN
@@ -56,12 +56,12 @@ func New(input string) *Lexer {
 <		LT
 <=		LTE
 <<		SHL
-<<=	SHL_ASSIGN
+<<=		SHL_ASSIGN
 
 >		GT
 >=		GTE
 >>		SHR
->>=	SHR_ASSIGN
+>>=		SHR_ASSIGN
 
 =		ASSIGN
 ==		EQL
@@ -70,7 +70,7 @@ func New(input string) *Lexer {
 !=		NEQL
 
 . 		DOT
-.. 	DBLDOT
+.. 		DBLDOT
 ... 	ELIPSIS
 
 ,		COMMA
@@ -119,10 +119,54 @@ func (l *Lexer) ScanNext() token.Token {
 	case '<':
 		l.ScanLeftChevron()
 		break
+	case '>':
+		l.ScanRightChevron()
+		break
+	case '=':
+		l.ScanEqual()
+		break
+	case '!':
+		l.ScanBang()
+		break
+	case '.':
+		l.ScanDot()
+		break
+	case ':': 
+		l.ScanColon() 
+		break
+	case ';':
+		token.SEMI
+		break
+	case ',':
+		token.COMMA
+		break
+	case '(':
+		token.LPAREN
+		break
+	case ')':
+		token.RPAREN
+		break
+	case '[':
+		token.LBRACK
+		break
+	case ']':
+		token.RBRACK
+		break
+	case '{':
+		token.LBRACE
+		break
+	case '}':
+		token.RBRACE
+		break
 	}
 }
 
 func (l *Lexer) ScanPlus() token.Token {
+	/*
+		+		ADD
+		++		INC
+		+=		ADD_ASSIGN
+	*/
 	switch l.peekChar() {
 	case '+':
 		l.readChar()
@@ -136,6 +180,11 @@ func (l *Lexer) ScanPlus() token.Token {
 }
 
 func (l *Lexer) ScanMinus() token.Token {
+	/*
+		-		SUB
+		--		DEC
+		-=		SUB_ASSIGN
+	*/
 	switch l.peekChar() {
 	case '-':
 		l.readChar()
@@ -150,10 +199,10 @@ func (l *Lexer) ScanMinus() token.Token {
 
 func (l *Lexer) ScanStar() token.Token {
 	/*
-		*	MUL
-		**	EXP
-		**= EXP_ASSIGN
-		*=	MUL_ASSIGN
+		*		MUL
+		**		EXP
+		**= 	EXP_ASSIGN
+		*=		MUL_ASSIGN
 	*/
 	switch l.peekChar() {
 	case '*': // **
@@ -196,8 +245,8 @@ func (l *Lexer) ScanSlash() token.Token {
 
 func (l *Lexer) ScanPercent() token.Token {
 	/*
-		%	REM
-		%=	REM_ASSIGN
+		%		REM
+		%=		REM_ASSIGN
 	*/
 	if l.peekChar() == '=' {
 		l.readChar()
@@ -272,7 +321,7 @@ func (l *Lexer) ScanLeftChevron() token.Token {
 		<		LT
 		<=		LTE
 		<<		SHL
-		<<=	SHL_ASSIGN
+		<<=		SHL_ASSIGN
 	*/
 	switch l.peakChar() {
 	case '<':
@@ -295,7 +344,7 @@ func (l *Lexer) ScanRightChevron() token.Token {
 		>		GT
 		>=		GTE
 		>>		SHR
-		>>=	SHR_ASSIGN
+		>>=		SHR_ASSIGN
 	*/
 	switch l.peakChar() {
 	case '>':
@@ -313,7 +362,58 @@ func (l *Lexer) ScanRightChevron() token.Token {
 	}
 }
 
+func (l *Lexer) ScanEqual() token.Token {
+	/*
+		=		ASSIGN
+		==		EQL
+	*/
+	if l.peekChar() == "=" {
+		l.readChar()
+		return token.EQL
+	}
+	return token.ASSIGN
+}
 
+func (l *Lexer) ScanBang() token.Token {
+	/*
+		!		NOT
+		!=		NEQL
+	*/
+	if l.peekChar() == '=' {
+		l.readChar() 
+		return token.NEQL
+	}
+	return token.NOT
+}
+
+func (l *Lexer) ScanDot() token.Token {
+	/*
+		.		DOT
+		..		DBLDOT
+		...		ELIPSIS
+	*/
+	if l.peekChar() == '.' {
+		l.readChar()
+		if l.peekChar() == '.'{
+			l.readChar()
+			return token.ELIPSIS
+		}
+		return token.DBLDOT
+	}
+	return token.DOT
+}
+
+func (l *Lexer) ScanColon()	token.Token {
+	/*
+		:		COLON
+		:=		DEFINE
+	*/
+	if l.peekChar() == '=' {
+		l.readChar() 
+		return token.DEFINE
+	}
+	return token.COLON
+}
 
 func (l *Lexer) ScanComment() token.Token {
 
