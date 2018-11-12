@@ -10,6 +10,7 @@ const (
 	ILLEGAL Token = iota
 	EOF
 	COMMENT
+	TRIVIA
 
 	literal_beg
 	IDENT  // main
@@ -140,6 +141,7 @@ var tokens = [...]string{
 	ILLEGAL: "ILLEGAL",
 	EOF:     "EOF",
 	COMMENT: "COMMENT",
+	TRIVIA:  "TRIVIA",
 
 	IDENT:  "IDENT",
 	INT:    "INT",

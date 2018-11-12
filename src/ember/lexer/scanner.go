@@ -123,5 +123,13 @@ cases:
 type Lexeme struct {
 	Token token.Token
 	Value string
-	src   []byte
+	Source   []byte
+}
+
+func CreateLexeme(token: token.Token, value: string) Lexeme {
+	return CreateLexemeWithSource(token: token, value: value, source: value)
+}
+
+func CreateLexemeWithSource(token: token.Token, value: string, source: []byte) Lexeme {
+	return Lexeme{Token: token, Value: value, Source: source}
 }

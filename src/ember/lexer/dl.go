@@ -135,28 +135,28 @@ func (l *Lexer) ScanNext() token.Token {
 		l.ScanColon() 
 		break
 	case ';':
-		token.SEMI
+		CreateLexeme(token.SEMI, l.ch)
 		break
 	case ',':
-		token.COMMA
+		CreateLexeme(token.COMMA, l.ch)
 		break
 	case '(':
-		token.LPAREN
+		CreateLexeme(token.LPAREN, l.ch)
 		break
 	case ')':
-		token.RPAREN
+		CreateLexeme(token.RPAREN, l.ch)
 		break
 	case '[':
-		token.LBRACK
+		CreateLexeme(token.LBRACK, l.ch)
 		break
 	case ']':
-		token.RBRACK
+		CreateLexeme(token.RBRACK, l.ch)
 		break
 	case '{':
-		token.LBRACE
+		CreateLexeme(token.LBRACE, l.ch)
 		break
 	case '}':
-		token.RBRACE
+		CreateLexeme(token.RBRACE, l.ch)
 		break
 	}
 }
@@ -502,10 +502,13 @@ func (l *Lexer) NextToken() token.Token {
 	return tok
 }
 
-func (l *Lexer) skipWhitespace() {
+func (l *Lexer) skipWhitespace() token.Token {
+	var trivia []byte
 	for l.ch == ' ' || l.ch == '\t' || l.ch == '\n' || l.ch == '\r' {
+		append(trvia, l.ch)
 		l.readChar()
 	}
+	return token.Trivia
 }
 
 func (l *Lexer) readChar() {
