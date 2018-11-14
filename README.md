@@ -49,3 +49,21 @@ actor Main {
 
 }
 ```
+
+
+
+### declarations
+
+```
+
+func GetPriceForUser() float32 {
+
+    let price = 1.23        // assign-once 
+    var discount = 0.15     // variable
+    const cost = 1.00       // compile-time constant
+
+    return floor( price * ( 1 - discount ), cost )
+}
+
+
+```
