@@ -260,7 +260,7 @@ const (
 	HighestPrec = 8
 )
 
-func (op emberToken) Precedence() int {
+func (op Token) Precedence() int {
 	switch op {
 	case LOR:
 		return 1
