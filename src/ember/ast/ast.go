@@ -2,6 +2,7 @@ package ast
 
 import (
 	"bytes"
+	"strings"
 
 	"github.com/sckelemen/ember/src/ember/token"
 )
@@ -154,4 +155,185 @@ type PrefixExpression struct {
 	Token    token.Token
 	Operator string
 	Right    Expression
+}
+
+func (pe *PrefixExpression) expressionNode()      {}
+func (pe *PrefixExpression) TokenLiteral() string { return pe.Token.String() }
+func (pe *PrefixExpression) String() string {
+	var out bytes.Buffer
+
+	out.WriteString("(")
+	out.WriteString(pe.Operator)
+	out.WriteString(pe.Right.String())
+	out.WriteString(")")
+
+	return out.String()
+}
+
+type InfixExpression struct {
+	Token    token.Token
+	Left     Expression
+	Operator string
+	Right    Expression
+}
+
+func (e *InfixExpression) expressionNode()      {}
+func (e *InfixExpression) TokenLiteral() string { return e.Token.String() }
+func (e *InfixExpression) String() string {
+	var out bytes.Buffer
+
+	out.WriteString("(")
+	out.WriteString(e.Left.String())
+	out.WriteString(" " + e.Operator + " ")
+	out.WriteString(e.Right.String())
+	out.WriteString(")")
+
+	return out.String()
+}
+
+type IfExpression struct {
+	Token       token.Token
+	Condition   Expression
+	Consequence *BlockStatement
+	Alternative *BlockStatement
+}
+
+func (e *IfExpression) expressionNode()      {}
+func (e *IfExpression) TokenLiteral() string { return e.Token.String() }
+func (e *IfExpression) String() string {
+	var out bytes.Buffer
+
+	out.WriteString("if")
+	out.WriteString(e.Condition.String())
+	out.WriteString(" ")
+	out.WriteString(e.Consequence.String())
+
+	if e.Alternative != nil {
+		out.WriteString("else ")
+		out.WriteString(e.Alternative.String())
+	}
+
+	return out.String()
+}
+
+type FunctionLiteral struct {
+	Token      token.Token
+	Parameters []*Identifier
+	Body       *BlockStatement
+}
+
+func (l *FunctionLiteral) expressionNode()      {}
+func (l *FunctionLiteral) TokenLiteral() string { return l.Token.String() }
+func (l *FunctionLiteral) String() string {
+	var out bytes.Buffer
+
+	params := []string{}
+	for _, p := range l.Parameters {
+		params = append(params, p.String())
+	}
+
+	out.WriteString(l.TokenLiteral())
+	out.WriteString("(")
+	out.WriteString(strings.Join(params, ", "))
+	out.WriteString(") ")
+	out.WriteString(l.Body.String())
+
+	return out.String()
+}
+
+type InvocationExpression struct {
+	Token     token.Token
+	Function  Expression
+	Arguments []Expression
+}
+
+func (e *InvocationExpression) expressionNode()      {}
+func (e *InvocationExpression) TokenLiteral() string { return e.Token.String() }
+func (e *InvocationExpression) String() string {
+	var out bytes.Buffer
+
+	args := []string{}
+	for _, a := range e.Arguments {
+		args = append(args, a.String())
+	}
+
+	out.WriteString(e.Function.String())
+	out.WriteString("(")
+	out.WriteString(strings.Join(args, ", "))
+	out.WriteString(")")
+
+	return out.String()
+}
+
+type StringLiteral struct {
+	Token token.Token
+	Value string
+}
+
+func (l *StringLiteral) expressionNode()      {}
+func (l *StringLiteral) TokenLiteral() string { return l.Token.String() }
+func (l *StringLiteral) String() string       { return l.Token.String() }
+
+type ArrayLiteral struct {
+	Token    token.Token
+	Elements []Expression
+}
+
+func (l *ArrayLiteral) expressionNode()      {}
+func (l *ArrayLiteral) TokenLiteral() string { return l.Token.String() }
+func (l *ArrayLiteral) String() string {
+	var out bytes.Buffer
+
+	elements := []string{}
+	for _, el := range l.Elements {
+		elements = append(elements, el.String())
+	}
+
+	out.WriteString("[")
+	out.WriteString(strings.Join(elements, ", "))
+	out.WriteString("]")
+
+	return out.String()
+}
+
+type IndexExpression struct {
+	Token token.Token
+	Left  Expression
+	Index Expression
+}
+
+func (e *IndexExpression) expressionNode()      {}
+func (e *IndexExpression) TokenLiteral() string { return e.Token.String() }
+func (e *IndexExpression) String() string {
+	var out bytes.Buffer
+
+	out.WriteString("(")
+	out.WriteString(e.Left.String())
+	out.WriteString("[")
+	out.WriteString(e.Index.String())
+	out.WriteString("])")
+
+	return out.String()
+}
+
+type HashLiteral struct {
+	Token token.Token
+	Pairs map[Expression]Expression
+}
+
+func (l *HashLiteral) expressionNode()      {}
+func (l *HashLiteral) TokenLiteral() string { return l.Token.String() }
+func (l *HashLiteral) String() string {
+	var out bytes.Buffer
+
+	pairs := []string{}
+	for key, value := range l.Pairs {
+		pairs = append(pairs, key.String()+":"+value.String())
+	}
+
+	out.WriteString("{")
+	out.WriteString(strings.Join(pairs, ", "))
+	out.WriteString("}")
+
+	return out.String()
 }
