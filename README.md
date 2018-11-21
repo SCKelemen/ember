@@ -93,6 +93,37 @@ Lexical Analysis is the process by which source code is scanned for Tokens, and 
 Syntactical Parsing
 Syntacitcal Parsing is the process by which the tokens or lexemes are analyzed for language constructs. The input to this process is the stream of Lexemes, which themselves contain Tokens. The output of this process is a graph, or a Syntax Tree.
 
+### Directories
+
+Files and Directories form a graph, or a tree. 
+
+
+![Alt text]()
+<details> 
+<summary></summary>
+custom_mark10
+  digraph G {
+    size ="4,4";
+    source [shape=box];
+    source -> component1;
+    source -> component2;
+    source -> component3; 
+    component1 -> c1file1;
+    component1 -> c1file2;
+    component2 -> c2file1;
+    component2 -> c2file2;
+    component2 -> c2file3;
+    component3 -> c3file1;
+    component3 -> c3subdir1;
+    component3 -> c3subdir2;
+    c3subdir1 -> c3sd1file1;
+    c3subdir1 -> c3sd1file2;
+    c3subdir1 -> c3sd1file3;
+    c3subdir2 -> c3sd2file1;    
+  }
+custom_mark10
+</details>
+
 ### Concurrency Models
 
 ### Distributed Models
