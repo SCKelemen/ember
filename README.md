@@ -104,6 +104,8 @@ Files and Directories form a graph, or a tree.
 digraph G { DIRECTORY [shape=box]; FILE; source [shape=box]; component1 [shape=box]; component2 [shape=box]; component3 [shape=box]; c3subdir1 [shape=box]; c3subdir2 [shape=box]; source -> component1; source -> component2; source -> component3; component1 -> c1file1; component1 -> c1file2; component2 -> c2file1; component2 -> c2file2; component2 -> c2file3; component3 -> c3file1; component3 -> c3subdir1; component3 -> c3subdir2; c3subdir1 -> c3sd1file1; c3subdir1 -> c3sd1file2; c3subdir1 -> c3sd1file3; c3subdir2 -> c3sd2file1; }
 </details>
 
+We can use this tree to define boundaries of concurrency. Each subgraph is dispatched to a compiler processor, which performs lexical scanning. Once scanning is complete, the subgraphs are merged in a mutation which combines the results of all subgraph processors. We can guarentee this merge using a lattice structure. 
+
 ### Concurrency Models
 
 ### Distributed Models
