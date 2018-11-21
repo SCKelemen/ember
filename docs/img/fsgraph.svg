@@ -1,0 +1,171 @@
+<svg width="744pt" height="260pt" viewBox="0.00 0.00 744.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>G</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-256 741,-256 741,5 -4,5"></polygon>
+<!-- DIRECTORY -->
+<g id="node1" class="node"><title>DIRECTORY</title>
+<polygon fill="none" stroke="black" points="194.072,-252 97.9284,-252 97.9284,-216 194.072,-216 194.072,-252"></polygon>
+<text text-anchor="middle" x="146" y="-229.8" font-family="Times,serif" font-size="14.00">DIRECTORY</text>
+</g>
+<!-- FILE -->
+<g id="node2" class="node"><title>FILE</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-234" rx="31.1284" ry="18"></ellipse>
+<text text-anchor="middle" x="243" y="-229.8" font-family="Times,serif" font-size="14.00">FILE</text>
+</g>
+<!-- source -->
+<g id="node3" class="node"><title>source</title>
+<polygon fill="none" stroke="black" points="346,-252 292,-252 292,-216 346,-216 346,-252"></polygon>
+<text text-anchor="middle" x="319" y="-229.8" font-family="Times,serif" font-size="14.00">source</text>
+</g>
+<!-- component1 -->
+<g id="node4" class="node"><title>component1</title>
+<polygon fill="none" stroke="black" points="173.407,-180 88.5927,-180 88.5927,-144 173.407,-144 173.407,-180"></polygon>
+<text text-anchor="middle" x="131" y="-157.8" font-family="Times,serif" font-size="14.00">component1</text>
+</g>
+<!-- source&#45;&gt;component1 -->
+<g id="edge2" class="edge"><title>source-&gt;component1</title>
+<path fill="none" stroke="black" d="M291.616,-219.703C288.725,-218.409 285.815,-217.152 283,-216 250.233,-202.594 212.675,-189.478 183.091,-179.647"></path>
+<polygon fill="black" stroke="black" points="183.975,-176.254 173.382,-176.444 181.782,-182.901 183.975,-176.254"></polygon>
+</g>
+<!-- component2 -->
+<g id="node5" class="node"><title>component2</title>
+<polygon fill="none" stroke="black" points="361.407,-180 276.593,-180 276.593,-144 361.407,-144 361.407,-180"></polygon>
+<text text-anchor="middle" x="319" y="-157.8" font-family="Times,serif" font-size="14.00">component2</text>
+</g>
+<!-- source&#45;&gt;component2 -->
+<g id="edge4" class="edge"><title>source-&gt;component2</title>
+<path fill="none" stroke="black" d="M319,-215.697C319,-207.983 319,-198.712 319,-190.112"></path>
+<polygon fill="black" stroke="black" points="322.5,-190.104 319,-180.104 315.5,-190.104 322.5,-190.104"></polygon>
+</g>
+<!-- component3 -->
+<g id="node6" class="node"><title>component3</title>
+<polygon fill="none" stroke="black" points="590.407,-180 505.593,-180 505.593,-144 590.407,-144 590.407,-180"></polygon>
+<text text-anchor="middle" x="548" y="-157.8" font-family="Times,serif" font-size="14.00">component3</text>
+</g>
+<!-- source&#45;&gt;component3 -->
+<g id="edge6" class="edge"><title>source-&gt;component3</title>
+<path fill="none" stroke="black" d="M346.169,-224.695C382.891,-213.47 449.119,-193.226 495.67,-178.996"></path>
+<polygon fill="black" stroke="black" points="496.748,-182.327 505.288,-176.056 494.701,-175.632 496.748,-182.327"></polygon>
+</g>
+<!-- c1file1 -->
+<g id="node13" class="node"><title>c1file1</title>
+<ellipse fill="none" stroke="black" cx="37" cy="-90" rx="37.2758" ry="18"></ellipse>
+<text text-anchor="middle" x="37" y="-85.8" font-family="Times,serif" font-size="14.00">c1file1</text>
+</g>
+<!-- component1&#45;&gt;c1file1 -->
+<g id="edge8" class="edge"><title>component1-&gt;c1file1</title>
+<path fill="none" stroke="black" d="M107.764,-143.697C94.7074,-133.974 78.3303,-121.778 64.6204,-111.568"></path>
+<polygon fill="black" stroke="black" points="66.5931,-108.674 56.4822,-105.508 62.4122,-114.288 66.5931,-108.674"></polygon>
+</g>
+<!-- c1file2 -->
+<g id="node15" class="node"><title>c1file2</title>
+<ellipse fill="none" stroke="black" cx="131" cy="-90" rx="37.2758" ry="18"></ellipse>
+<text text-anchor="middle" x="131" y="-85.8" font-family="Times,serif" font-size="14.00">c1file2</text>
+</g>
+<!-- component1&#45;&gt;c1file2 -->
+<g id="edge10" class="edge"><title>component1-&gt;c1file2</title>
+<path fill="none" stroke="black" d="M131,-143.697C131,-135.983 131,-126.712 131,-118.112"></path>
+<polygon fill="black" stroke="black" points="134.5,-118.104 131,-108.104 127.5,-118.104 134.5,-118.104"></polygon>
+</g>
+<!-- c2file1 -->
+<g id="node17" class="node"><title>c2file1</title>
+<ellipse fill="none" stroke="black" cx="225" cy="-90" rx="37.2758" ry="18"></ellipse>
+<text text-anchor="middle" x="225" y="-85.8" font-family="Times,serif" font-size="14.00">c2file1</text>
+</g>
+<!-- component2&#45;&gt;c2file1 -->
+<g id="edge12" class="edge"><title>component2-&gt;c2file1</title>
+<path fill="none" stroke="black" d="M295.764,-143.697C282.707,-133.974 266.33,-121.778 252.62,-111.568"></path>
+<polygon fill="black" stroke="black" points="254.593,-108.674 244.482,-105.508 250.412,-114.288 254.593,-108.674"></polygon>
+</g>
+<!-- c2file2 -->
+<g id="node19" class="node"><title>c2file2</title>
+<ellipse fill="none" stroke="black" cx="319" cy="-90" rx="37.2758" ry="18"></ellipse>
+<text text-anchor="middle" x="319" y="-85.8" font-family="Times,serif" font-size="14.00">c2file2</text>
+</g>
+<!-- component2&#45;&gt;c2file2 -->
+<g id="edge14" class="edge"><title>component2-&gt;c2file2</title>
+<path fill="none" stroke="black" d="M319,-143.697C319,-135.983 319,-126.712 319,-118.112"></path>
+<polygon fill="black" stroke="black" points="322.5,-118.104 319,-108.104 315.5,-118.104 322.5,-118.104"></polygon>
+</g>
+<!-- c2file3 -->
+<g id="node21" class="node"><title>c2file3</title>
+<ellipse fill="none" stroke="black" cx="413" cy="-90" rx="37.2758" ry="18"></ellipse>
+<text text-anchor="middle" x="413" y="-85.8" font-family="Times,serif" font-size="14.00">c2file3</text>
+</g>
+<!-- component2&#45;&gt;c2file3 -->
+<g id="edge16" class="edge"><title>component2-&gt;c2file3</title>
+<path fill="none" stroke="black" d="M342.236,-143.697C355.293,-133.974 371.67,-121.778 385.38,-111.568"></path>
+<polygon fill="black" stroke="black" points="387.588,-114.288 393.518,-105.508 383.407,-108.674 387.588,-114.288"></polygon>
+</g>
+<!-- c3subdir1 -->
+<g id="node7" class="node"><title>c3subdir1</title>
+<polygon fill="none" stroke="black" points="539.407,-108 468.593,-108 468.593,-72 539.407,-72 539.407,-108"></polygon>
+<text text-anchor="middle" x="504" y="-85.8" font-family="Times,serif" font-size="14.00">c3subdir1</text>
+</g>
+<!-- component3&#45;&gt;c3subdir1 -->
+<g id="edge20" class="edge"><title>component3-&gt;c3subdir1</title>
+<path fill="none" stroke="black" d="M537.124,-143.697C532.008,-135.559 525.805,-125.689 520.155,-116.701"></path>
+<polygon fill="black" stroke="black" points="523.036,-114.708 514.751,-108.104 517.11,-118.433 523.036,-114.708"></polygon>
+</g>
+<!-- c3subdir2 -->
+<g id="node8" class="node"><title>c3subdir2</title>
+<polygon fill="none" stroke="black" points="628.407,-108 557.593,-108 557.593,-72 628.407,-72 628.407,-108"></polygon>
+<text text-anchor="middle" x="593" y="-85.8" font-family="Times,serif" font-size="14.00">c3subdir2</text>
+</g>
+<!-- component3&#45;&gt;c3subdir2 -->
+<g id="edge22" class="edge"><title>component3-&gt;c3subdir2</title>
+<path fill="none" stroke="black" d="M559.124,-143.697C564.355,-135.559 570.7,-125.689 576.478,-116.701"></path>
+<polygon fill="black" stroke="black" points="579.541,-118.409 582.004,-108.104 573.653,-114.623 579.541,-118.409"></polygon>
+</g>
+<!-- c3file1 -->
+<g id="node23" class="node"><title>c3file1</title>
+<ellipse fill="none" stroke="black" cx="684" cy="-90" rx="37.2758" ry="18"></ellipse>
+<text text-anchor="middle" x="684" y="-85.8" font-family="Times,serif" font-size="14.00">c3file1</text>
+</g>
+<!-- component3&#45;&gt;c3file1 -->
+<g id="edge18" class="edge"><title>component3-&gt;c3file1</title>
+<path fill="none" stroke="black" d="M581.269,-143.876C602.231,-133.087 629.211,-119.2 650.261,-108.366"></path>
+<polygon fill="black" stroke="black" points="651.888,-111.465 659.178,-103.776 648.685,-105.241 651.888,-111.465"></polygon>
+</g>
+<!-- c3sd1file1 -->
+<g id="node27" class="node"><title>c3sd1file1</title>
+<ellipse fill="none" stroke="black" cx="322" cy="-18" rx="50.894" ry="18"></ellipse>
+<text text-anchor="middle" x="322" y="-13.8" font-family="Times,serif" font-size="14.00">c3sd1file1</text>
+</g>
+<!-- c3subdir1&#45;&gt;c3sd1file1 -->
+<g id="edge24" class="edge"><title>c3subdir1-&gt;c3sd1file1</title>
+<path fill="none" stroke="black" d="M468.477,-75.3371C438.758,-63.9069 396.274,-47.567 364.707,-35.4256"></path>
+<polygon fill="black" stroke="black" points="365.876,-32.1256 355.286,-31.8025 363.363,-38.6591 365.876,-32.1256"></polygon>
+</g>
+<!-- c3sd1file2 -->
+<g id="node29" class="node"><title>c3sd1file2</title>
+<ellipse fill="none" stroke="black" cx="443" cy="-18" rx="50.894" ry="18"></ellipse>
+<text text-anchor="middle" x="443" y="-13.8" font-family="Times,serif" font-size="14.00">c3sd1file2</text>
+</g>
+<!-- c3subdir1&#45;&gt;c3sd1file2 -->
+<g id="edge26" class="edge"><title>c3subdir1-&gt;c3sd1file2</title>
+<path fill="none" stroke="black" d="M488.921,-71.6966C481.424,-63.0933 472.24,-52.554 464.06,-43.1677"></path>
+<polygon fill="black" stroke="black" points="466.694,-40.862 457.485,-35.6223 461.416,-45.4609 466.694,-40.862"></polygon>
+</g>
+<!-- c3sd1file3 -->
+<g id="node31" class="node"><title>c3sd1file3</title>
+<ellipse fill="none" stroke="black" cx="564" cy="-18" rx="50.894" ry="18"></ellipse>
+<text text-anchor="middle" x="564" y="-13.8" font-family="Times,serif" font-size="14.00">c3sd1file3</text>
+</g>
+<!-- c3subdir1&#45;&gt;c3sd1file3 -->
+<g id="edge28" class="edge"><title>c3subdir1-&gt;c3sd1file3</title>
+<path fill="none" stroke="black" d="M518.831,-71.6966C526.132,-63.1793 535.059,-52.7646 543.043,-43.4497"></path>
+<polygon fill="black" stroke="black" points="545.902,-45.4927 549.752,-35.6223 540.587,-40.9371 545.902,-45.4927"></polygon>
+</g>
+<!-- c3sd2file1 -->
+<g id="node33" class="node"><title>c3sd2file1</title>
+<ellipse fill="none" stroke="black" cx="685" cy="-18" rx="50.894" ry="18"></ellipse>
+<text text-anchor="middle" x="685" y="-13.8" font-family="Times,serif" font-size="14.00">c3sd2file1</text>
+</g>
+<!-- c3subdir2&#45;&gt;c3sd2file1 -->
+<g id="edge30" class="edge"><title>c3subdir2-&gt;c3sd2file1</title>
+<path fill="none" stroke="black" d="M615.742,-71.6966C627.963,-62.3974 643.158,-50.8364 656.198,-40.9145"></path>
+<polygon fill="black" stroke="black" points="658.565,-43.5119 664.404,-34.6712 654.326,-37.9411 658.565,-43.5119"></polygon>
+</g>
+</g>
+</svg>
