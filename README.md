@@ -67,3 +67,13 @@ func GetPriceForUser() float32 {
 
 
 ```
+
+# Compiler Strategies
+
+## Highly Concurrent and Distributed
+
+As time has continued, so has progress. Unfortunately for code, this often means more code. Although the cloud services industry has turned to microservice architectures to allow of polyglot development, developer velocity, and highly decoupled systems, large companies such as Google and Microsoft, have admitted that the properties of shared repositories provide strong motiviations for not adopting a strictly microservice strategy. The design philosphies behind microservice exist without and independently from separate repositories. With these factors under consideration, the compiler should be designed to maximize these traits, without requiring them. Therefore, a goal of this project is to allow for quick compilations to aid in developer velocity, despite any size complexity of a project. The compiler will make use of not only concurrency primitives, but distributed primitives as well, to allow for horizontal scaling. The compiler should work well on projects of any size.
+
+### Concurrency Models
+
+### Distributed Models
