@@ -88,7 +88,10 @@ Pragmatics refers to the implementation of the language: usually the compiler.
 
 
 Lexical Analysis
+Lexical Analysis is the process by which source code is scanned for Tokens, and Lexemes are generated. The input to the process is the byte stream of a source code file. In our case, this is a stream of UTF-8 encoded bytes. The output of this process is a stream of Tokens or Lexemes. In our case, Tokens refer to a type, and a Lexeme is an instance of this token type.
 
+Syntactical Parsing
+Syntacitcal Parsing is the process by which the tokens or lexemes are analyzed for language constructs. The input to this process is the stream of Lexemes, which themselves contain Tokens. The output of this process is a graph, or a Syntax Tree.
 
 ### Concurrency Models
 
