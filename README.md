@@ -74,6 +74,22 @@ func GetPriceForUser() float32 {
 
 As time has continued, so has progress. Unfortunately for code, this often means more code. Although the cloud services industry has turned to microservice architectures to allow of polyglot development, developer velocity, and highly decoupled systems, large companies such as Google and Microsoft, have admitted that the properties of shared repositories provide strong motiviations for not adopting a strictly microservice strategy. The design philosphies behind microservice exist without and independently from separate repositories. With these factors under consideration, the compiler should be designed to maximize these traits, without requiring them. Therefore, a goal of this project is to allow for quick compilations to aid in developer velocity, despite any size complexity of a project. The compiler will make use of not only concurrency primitives, but distributed primitives as well, to allow for horizontal scaling. The compiler should work well on projects of any size.
 
+## The Compilation Pipeline
+
+There are several components to compilers. We can think of compilers in many ways. Throughout this project, we will refer to parts of the system in the following ways:
+
+### Syntax, Semantics, and Pragmatics
+
+Syntax refers to the language constructs of the system; usually sugars.
+
+Semantics refers to the structure of the language; usually the semantic tree. 
+
+Pragmatics refers to the implementation of the language: usually the compiler.
+
+
+Lexical Analysis
+
+
 ### Concurrency Models
 
 ### Distributed Models
