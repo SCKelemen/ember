@@ -109,3 +109,17 @@ We can use this tree to define boundaries of concurrency. Each subgraph is dispa
 ### Concurrency Models
 
 ### Distributed Models
+
+
+## Resources
+
+### Scheduling
+  Books
+  
+  - Intelligent Scheduling                          *Monte Zweben, Mark S. Fox*
+  - Scheduling: Theory, Algorithms, and Systems     *Michael Pinedo*
+         
+
+### Collection
+  Books
+  - The Garbage Collection Handbook                 *Richard Jones, Antony Hosking, Eliot Moss*
