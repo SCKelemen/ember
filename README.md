@@ -116,6 +116,9 @@ We can use this tree to define boundaries of concurrency. Each subgraph is dispa
 ### Parsing
    - [Tolerant Parsing ](https://github.com/Microsoft/tolerant-php-parser/blob/master/docs/HowItWorks.md)
 
+### Tooling
+   - [Language Server (Protocol)](https://code.visualstudio.com/docs/extensions/example-language-server)
+
 ### Scheduling
   Books
   
