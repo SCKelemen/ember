@@ -12,6 +12,11 @@ const (
 	COMMENT
 	TRIVIA
 
+	error_token_beg // add extra tokens for fault tolerant parsing
+	SKIPPED         // occurs when an extra token appears, and nothing in the tree knows how to handle it
+	MISSING         // occurs when grammar expects a token, but it can't be found
+	error_token_end
+
 	literal_beg
 	IDENT  // main
 	INT    // 12345
@@ -142,6 +147,9 @@ var tokens = [...]string{
 	EOF:     "EOF",
 	COMMENT: "COMMENT",
 	TRIVIA:  "TRIVIA",
+
+	SKIPPED: "SKIPPED",
+	MISSING: "MISSING",
 
 	IDENT:  "IDENT",
 	INT:    "INT",
@@ -300,3 +308,5 @@ func (tok Token) IsLiteral() bool { return literal_beg < tok && tok < literal_en
 func (tok Token) IsOperator() bool { return arithmetic_op_beg < tok && tok < ops_end }
 
 func (tok Token) IsKeyword() bool { return keyword_beg < tok && tok < keyword_end }
+
+func (tok Token) IsErrorToken() bool { return error_token_beg < tok && tok < error_token_end }
