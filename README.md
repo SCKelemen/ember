@@ -128,6 +128,7 @@ We can use this tree to define boundaries of concurrency. Each subgraph is dispa
 ### Collection
   Books
   - The Garbage Collection Handbook                 *Richard Jones, Antony Hosking, Eliot Moss*
+  - [GC Handbook](http://gchandbook.org/)
 
 ### Actors
 
