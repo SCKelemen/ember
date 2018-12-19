@@ -125,7 +125,10 @@ We can use this tree to define boundaries of concurrency. Each subgraph is dispa
   - Intelligent Scheduling                          *Monte Zweben, Mark S. Fox*
   - Scheduling: Theory, Algorithms, and Systems     *Michael Pinedo*
          
-
 ### Collection
   Books
   - The Garbage Collection Handbook                 *Richard Jones, Antony Hosking, Eliot Moss*
+
+### Actors
+
+  - [Hewitt, Meijer and Szyperski: The Actor Model](https://youtu.be/7erJ1DV_Tlo)
