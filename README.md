@@ -136,3 +136,6 @@ We can use this tree to define boundaries of concurrency. Each subgraph is dispa
 ### Actors
 
   - [Hewitt, Meijer and Szyperski: The Actor Model](https://youtu.be/7erJ1DV_Tlo)
+
+### Stats
+  - [ Beating Machine Learning ](https://www.youtube.com/watch?v=NKeHrApPWlo)
