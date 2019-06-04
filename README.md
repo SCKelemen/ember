@@ -83,6 +83,37 @@ type Reader = IReader;
 type Writer = IWriter;
 type ReaderWrite = Reader & Writer;
 
+
+
+
+type Result<T> = { result: T }
+
+function Result<T>(result: T): Result<T> {
+    return {result};
+}
+
+interface IError {
+    Message?: string
+    Code?: number
+}
+
+
+type Try<T> = Result<T> | IError
+type Possible<T> = T | IError
+
+type Some<T> = { value: T }
+
+function Some<T>(value: T): Some<T> {
+    return {value};
+}
+
+
+type None = {}
+const None: None = {};
+
+type Maybe<T> = Some<T> | None
+ 
+
 ```
 
 # Compiler Strategies
