@@ -68,6 +68,23 @@ func GetPriceForUser() float32 {
 
 ```
 
+### system interfaces
+
+```ts
+interface IReader {
+    Read(): void 
+}
+
+interface IWriter {
+    Write(input: Bytes): void 
+}
+
+type Reader = IReader;
+type Writer = IWriter;
+type ReaderWrite = Reader & Writer;
+
+```
+
 # Compiler Strategies
 
 ## Highly Concurrent and Distributed
